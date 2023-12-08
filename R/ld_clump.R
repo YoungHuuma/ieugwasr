@@ -153,7 +153,8 @@ ld_clump_local <- function(dat, clump_kb, clump_r2, clump_p, bfile, plink_bin)
 		" --bfile ", shQuote(bfile, type=shell),
 		" --clump ", shQuote(fn, type=shell), 
 		" --clump-p1 ", clump_p, 
-		" --clump-r2 ", clump_r2, 
+		" --clump-r2 ", 
+		"--threads 1"，clump_r2, 
 		" --clump-kb ", clump_kb, 
 		" --out ", shQuote(fn, type=shell)
 	)
